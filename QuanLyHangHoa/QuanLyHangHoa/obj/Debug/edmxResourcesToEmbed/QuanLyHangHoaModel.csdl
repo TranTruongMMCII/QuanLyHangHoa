@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyHangHoaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DanhMuc">
+    <Key>
+      <PropertyRef Name="MaDanhMuc" />
+    </Key>
+    <Property Name="MaDanhMuc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDanhMuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HangHoas" Relationship="QuanLyHangHoaModel.FK__HangHoa__MaDanhM__6B24EA82" FromRole="DanhMuc" ToRole="HangHoa" />
+  </EntityType>
+  <EntityType Name="DonViTinh">
+    <Key>
+      <PropertyRef Name="MaDonViTinh" />
+    </Key>
+    <Property Name="MaDonViTinh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDonViTinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HangHoas" Relationship="Self.FK__HangHoa__MaDonVi__31EC6D26" FromRole="DonViTinh" ToRole="HangHoa" />
+  </EntityType>
+  <EntityType Name="HangHoa">
+    <Key>
+      <PropertyRef Name="MaHangHoa" />
+    </Key>
+    <Property Name="MaHangHoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaMatHang" Type="Int32" />
+    <Property Name="MaNhaCungCap" Type="Int32" />
+    <Property Name="MaQuiCach" Type="Int32" />
+    <Property Name="MaDonViTinh" Type="Int32" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="DonViTinh" Relationship="Self.FK__HangHoa__MaDonVi__31EC6D26" FromRole="HangHoa" ToRole="DonViTinh" />
+    <NavigationProperty Name="MatHang" Relationship="Self.FK__HangHoa__MaMatHa__2F10007B" FromRole="HangHoa" ToRole="MatHang" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__HangHoa__MaNhaCu__300424B4" FromRole="HangHoa" ToRole="NhaCungCap" />
+    <NavigationProperty Name="QuiCach" Relationship="Self.FK__HangHoa__MaQuiCa__30F848ED" FromRole="HangHoa" ToRole="QuiCach" />
+    <NavigationProperty Name="PhieuNhapHangs" Relationship="Self.FK__PhieuNhap__MaHan__3E52440B" FromRole="HangHoa" ToRole="PhieuNhapHang" />
+    <Property Name="MaDanhMuc" Type="Int32" />
+    <NavigationProperty Name="DanhMuc" Relationship="QuanLyHangHoaModel.FK__HangHoa__MaDanhM__6B24EA82" FromRole="HangHoa" ToRole="DanhMuc" />
+  </EntityType>
+  <EntityType Name="MatHang">
+    <Key>
+      <PropertyRef Name="MaMatHang" />
+    </Key>
+    <Property Name="MaMatHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMatHang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HangHoas" Relationship="Self.FK__HangHoa__MaMatHa__2F10007B" FromRole="MatHang" ToRole="HangHoa" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNhaCungCap" />
+    </Key>
+    <Property Name="MaNhaCungCap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNhaCungCap" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HangHoas" Relationship="Self.FK__HangHoa__MaNhaCu__300424B4" FromRole="NhaCungCap" ToRole="HangHoa" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PhieuNhapHangs" Relationship="Self.FK__PhieuNhap__MaNha__3F466844" FromRole="NhanVien" ToRole="PhieuNhapHang" />
+  </EntityType>
+  <EntityType Name="PhieuNhapHang">
+    <Key>
+      <PropertyRef Name="MaPhieuNhap" />
+    </Key>
+    <Property Name="MaPhieuNhap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaHangHoa" Type="Int32" />
+    <Property Name="MaNhanVien" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="GiaNhap" Type="Double" />
+    <NavigationProperty Name="HangHoa" Relationship="Self.FK__PhieuNhap__MaHan__3E52440B" FromRole="PhieuNhapHang" ToRole="HangHoa" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK__PhieuNhap__MaNha__3F466844" FromRole="PhieuNhapHang" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="QuiCach">
+    <Key>
+      <PropertyRef Name="MaQuiCach" />
+    </Key>
+    <Property Name="MaQuiCach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenQuiCach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HangHoas" Relationship="Self.FK__HangHoa__MaQuiCa__30F848ED" FromRole="QuiCach" ToRole="HangHoa" />
+  </EntityType>
+  <Association Name="FK__HangHoa__MaDonVi__31EC6D26">
+    <End Role="DonViTinh" Type="Self.DonViTinh" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonViTinh">
+        <PropertyRef Name="MaDonViTinh" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaDonViTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HangHoa__MaMatHa__2F10007B">
+    <End Role="MatHang" Type="Self.MatHang" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MatHang">
+        <PropertyRef Name="MaMatHang" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaMatHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HangHoa__MaNhaCu__300424B4">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNhaCungCap" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaNhaCungCap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HangHoa__MaQuiCa__30F848ED">
+    <End Role="QuiCach" Type="Self.QuiCach" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuiCach">
+        <PropertyRef Name="MaQuiCach" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaQuiCach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__MaHan__3E52440B">
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="0..1" />
+    <End Role="PhieuNhapHang" Type="Self.PhieuNhapHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="MaHangHoa" />
+      </Principal>
+      <Dependent Role="PhieuNhapHang">
+        <PropertyRef Name="MaHangHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__MaNha__3F466844">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="PhieuNhapHang" Type="Self.PhieuNhapHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="PhieuNhapHang">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyHangHoaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DanhMucs" EntityType="Self.DanhMuc" />
+    <EntitySet Name="DonViTinhs" EntityType="Self.DonViTinh" />
+    <EntitySet Name="HangHoas" EntityType="Self.HangHoa" />
+    <EntitySet Name="MatHangs" EntityType="Self.MatHang" />
+    <EntitySet Name="NhaCungCaps" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="PhieuNhapHangs" EntityType="Self.PhieuNhapHang" />
+    <EntitySet Name="QuiCaches" EntityType="Self.QuiCach" />
+    <AssociationSet Name="FK__HangHoa__MaDonVi__31EC6D26" Association="Self.FK__HangHoa__MaDonVi__31EC6D26">
+      <End Role="DonViTinh" EntitySet="DonViTinhs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HangHoa__MaMatHa__2F10007B" Association="Self.FK__HangHoa__MaMatHa__2F10007B">
+      <End Role="MatHang" EntitySet="MatHangs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HangHoa__MaNhaCu__300424B4" Association="Self.FK__HangHoa__MaNhaCu__300424B4">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HangHoa__MaQuiCa__30F848ED" Association="Self.FK__HangHoa__MaQuiCa__30F848ED">
+      <End Role="QuiCach" EntitySet="QuiCaches" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__MaHan__3E52440B" Association="Self.FK__PhieuNhap__MaHan__3E52440B">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="PhieuNhapHang" EntitySet="PhieuNhapHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__MaNha__3F466844" Association="Self.FK__PhieuNhap__MaNha__3F466844">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="PhieuNhapHang" EntitySet="PhieuNhapHangs" />
+    </AssociationSet>
+    <EntitySet Name="LoiNhuans" EntityType="QuanLyHangHoaModel.LoiNhuan" />
+    <EntitySet Name="sysdiagrams" EntityType="QuanLyHangHoaModel.sysdiagram" />
+    <AssociationSet Name="FK__HangHoa__MaDanhM__6B24EA82" Association="QuanLyHangHoaModel.FK__HangHoa__MaDanhM__6B24EA82">
+      <End Role="DanhMuc" EntitySet="DanhMucs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="LoiNhuan">
+    <Key>
+      <PropertyRef Name="MaLoiNhuan" />
+    </Key>
+    <Property Name="GiaTriLoiNhuan" Type="Double" />
+    <Property Name="MaLoiNhuan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayThayDoi" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__HangHoa__MaDanhM__6B24EA82">
+    <End Type="QuanLyHangHoaModel.DanhMuc" Role="DanhMuc" Multiplicity="0..1" />
+    <End Type="QuanLyHangHoaModel.HangHoa" Role="HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DanhMuc">
+        <PropertyRef Name="MaDanhMuc" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaDanhMuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
