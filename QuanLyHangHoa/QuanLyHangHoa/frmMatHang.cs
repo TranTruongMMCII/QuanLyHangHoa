@@ -39,6 +39,7 @@ namespace QuanLyHangHoa
                 matHangTableAdapter.Update(this.quanLyHangHoaDataSet2.MatHang);
                 frmMatHang_Load(sender, e);
             }
+            frmMatHang_Load(sender, e);
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)

@@ -17,3 +17,7 @@ D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\Q
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.csproj.AssemblyReference.cache
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmDonViTinh.resources
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmQuiCach.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmHangHoa.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmMatHang.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmNhaCungCap.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmNhanVien.resources
