@@ -16,7 +16,7 @@ namespace QuanLyHangHoa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDanhSachHangHoaSapHetHang());
+            Application.Run(new frmMain());
         }
     }
 }

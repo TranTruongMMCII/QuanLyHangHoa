@@ -25,6 +25,7 @@
         <EntityTypeShape EntityType="QuanLyHangHoaModel.HangTonKho" Width="1.5" PointX="5.25" PointY="11" />
         <AssociationConnector Association="QuanLyHangHoaModel.FK__HangTonKh__MaHan__02FC7413" />
         <EntityTypeShape EntityType="QuanLyHangHoaModel.GiaTriTonKhoToiThieu" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="QuanLyHangHoaModel.KhachHang" Width="1.5" PointX="8.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

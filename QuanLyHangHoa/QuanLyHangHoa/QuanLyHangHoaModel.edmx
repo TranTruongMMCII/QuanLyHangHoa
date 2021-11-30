@@ -46,6 +46,18 @@
           <Property Name="MaHangHoa" Type="int" Nullable="false" />
           <Property Name="SoLuongCon" Type="int" />
         </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="CMND" />
+          </Key>
+          <Property Name="CMND" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
+          <Property Name="SDT" Type="varchar" MaxLength="10" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+          <Property Name="DiemSo" Type="int" />
+          <Property Name="HangThe" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
         <EntityType Name="LoiNhuan">
           <Key>
             <PropertyRef Name="MaLoiNhuan" />
@@ -216,6 +228,7 @@
           <EntitySet Name="GiaTriTonKhoToiThieu" EntityType="Self.GiaTriTonKhoToiThieu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HangHoa" EntityType="Self.HangHoa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HangTonKho" EntityType="Self.HangTonKho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoiNhuan" EntityType="Self.LoiNhuan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MatHang" EntityType="Self.MatHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
@@ -460,6 +473,7 @@
             <End Role="HangTonKho" EntitySet="HangTonKhoes" />
           </AssociationSet>
           <EntitySet Name="GiaTriTonKhoToiThieux" EntityType="QuanLyHangHoaModel.GiaTriTonKhoToiThieu" />
+          <EntitySet Name="KhachHangs" EntityType="QuanLyHangHoaModel.KhachHang" />
         </EntityContainer>
         <EntityType Name="LoiNhuan">
           <Key>
@@ -518,6 +532,18 @@
           <Property Name="MaGiaTriTonKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SoLuongTonKhoToiThieu" Type="Double" />
           <Property Name="NgayThayDoi" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="KhachHang">
+          <Key>
+            <PropertyRef Name="CMND" />
+          </Key>
+          <Property Name="CMND" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DiemSo" Type="Int32" />
+          <Property Name="HangThe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -631,6 +657,19 @@
                 <ScalarProperty Name="NgayThayDoi" ColumnName="NgayThayDoi" />
                 <ScalarProperty Name="SoLuongTonKhoToiThieu" ColumnName="SoLuongTonKhoToiThieu" />
                 <ScalarProperty Name="MaGiaTriTonKho" ColumnName="MaGiaTriTonKho" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhachHangs">
+            <EntityTypeMapping TypeName="QuanLyHangHoaModel.KhachHang">
+              <MappingFragment StoreEntitySet="KhachHang">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="HangThe" ColumnName="HangThe" />
+                <ScalarProperty Name="DiemSo" ColumnName="DiemSo" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

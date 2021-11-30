@@ -35,42 +35,42 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.Hủy = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbMatHang = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbDanhMuc = new System.Windows.Forms.ComboBox();
+            this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyHangHoaDataSet2 = new QuanLyHangHoa.QuanLyHangHoaDataSet2();
-            this.matHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matHangTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.MatHangTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbDonViTinh = new System.Windows.Forms.ComboBox();
+            this.donViTinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyHangHoaDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbQuiCach = new System.Windows.Forms.ComboBox();
+            this.quiCachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbNhaCungCap = new System.Windows.Forms.ComboBox();
             this.nhaCungCapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbMatHang = new System.Windows.Forms.ComboBox();
+            this.matHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matHangTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.MatHangTableAdapter();
             this.nhaCungCapTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.NhaCungCapTableAdapter();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbQuiCach = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbDonViTinh = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbDanhMuc = new System.Windows.Forms.ComboBox();
-            this.quiCachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quiCachTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.QuiCachTableAdapter();
-            this.quanLyHangHoaDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.donViTinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.donViTinhTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.DonViTinhTableAdapter();
-            this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.danhMucTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet2TableAdapters.DanhMucTableAdapter();
             this.danhMucBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.Hủy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matHangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quiCachBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViTinhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViTinhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quiCachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,6 +141,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Location = new System.Drawing.Point(98, 27);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 37);
+            this.btnLuu.TabIndex = 4;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // Hủy
+            // 
+            this.Hủy.Location = new System.Drawing.Point(98, 80);
+            this.Hủy.Name = "Hủy";
+            this.Hủy.Size = new System.Drawing.Size(75, 37);
+            this.Hủy.TabIndex = 5;
+            this.Hủy.Text = "Hủy";
+            this.Hủy.UseVisualStyleBackColor = true;
+            this.Hủy.Click += new System.EventHandler(this.Hủy_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
@@ -160,39 +181,90 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Giá trị";
             // 
-            // cmbMatHang
+            // label6
             // 
-            this.cmbMatHang.DataSource = this.matHangBindingSource;
-            this.cmbMatHang.DisplayMember = "TenMatHang";
-            this.cmbMatHang.FormattingEnabled = true;
-            this.cmbMatHang.Location = new System.Drawing.Point(116, 18);
-            this.cmbMatHang.Name = "cmbMatHang";
-            this.cmbMatHang.Size = new System.Drawing.Size(156, 24);
-            this.cmbMatHang.TabIndex = 0;
-            this.cmbMatHang.ValueMember = "MaMatHang";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(308, 92);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Danh mục";
+            // 
+            // cmbDanhMuc
+            // 
+            this.cmbDanhMuc.DataSource = this.danhMucBindingSource;
+            this.cmbDanhMuc.DisplayMember = "TenDanhMuc";
+            this.cmbDanhMuc.FormattingEnabled = true;
+            this.cmbDanhMuc.Location = new System.Drawing.Point(417, 88);
+            this.cmbDanhMuc.Name = "cmbDanhMuc";
+            this.cmbDanhMuc.Size = new System.Drawing.Size(156, 24);
+            this.cmbDanhMuc.TabIndex = 8;
+            this.cmbDanhMuc.ValueMember = "MaDanhMuc";
+            // 
+            // danhMucBindingSource
+            // 
+            this.danhMucBindingSource.DataMember = "DanhMuc";
+            this.danhMucBindingSource.DataSource = this.quanLyHangHoaDataSet2;
             // 
             // quanLyHangHoaDataSet2
             // 
             this.quanLyHangHoaDataSet2.DataSetName = "QuanLyHangHoaDataSet2";
             this.quanLyHangHoaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // matHangBindingSource
+            // label5
             // 
-            this.matHangBindingSource.DataMember = "MatHang";
-            this.matHangBindingSource.DataSource = this.quanLyHangHoaDataSet2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(308, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Đơn vị tính";
             // 
-            // matHangTableAdapter
+            // cmbDonViTinh
             // 
-            this.matHangTableAdapter.ClearBeforeFill = true;
+            this.cmbDonViTinh.DataSource = this.donViTinhBindingSource;
+            this.cmbDonViTinh.DisplayMember = "TenDonViTinh";
+            this.cmbDonViTinh.FormattingEnabled = true;
+            this.cmbDonViTinh.Location = new System.Drawing.Point(417, 53);
+            this.cmbDonViTinh.Name = "cmbDonViTinh";
+            this.cmbDonViTinh.Size = new System.Drawing.Size(156, 24);
+            this.cmbDonViTinh.TabIndex = 6;
+            this.cmbDonViTinh.ValueMember = "MaDonViTinh";
             // 
-            // label2
+            // donViTinhBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mặt hàng";
+            this.donViTinhBindingSource.DataMember = "DonViTinh";
+            this.donViTinhBindingSource.DataSource = this.quanLyHangHoaDataSet2BindingSource;
+            // 
+            // quanLyHangHoaDataSet2BindingSource
+            // 
+            this.quanLyHangHoaDataSet2BindingSource.DataSource = this.quanLyHangHoaDataSet2;
+            this.quanLyHangHoaDataSet2BindingSource.Position = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(308, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Qui cách";
+            // 
+            // cmbQuiCach
+            // 
+            this.cmbQuiCach.DataSource = this.quiCachBindingSource;
+            this.cmbQuiCach.DisplayMember = "TenQuiCach";
+            this.cmbQuiCach.FormattingEnabled = true;
+            this.cmbQuiCach.Location = new System.Drawing.Point(417, 18);
+            this.cmbQuiCach.Name = "cmbQuiCach";
+            this.cmbQuiCach.Size = new System.Drawing.Size(156, 24);
+            this.cmbQuiCach.TabIndex = 4;
+            this.cmbQuiCach.ValueMember = "MaQuiCach";
+            // 
+            // quiCachBindingSource
+            // 
+            this.quiCachBindingSource.DataMember = "QuiCach";
+            this.quiCachBindingSource.DataSource = this.quanLyHangHoaDataSet2;
             // 
             // label3
             // 
@@ -219,97 +291,46 @@
             this.nhaCungCapBindingSource.DataMember = "NhaCungCap";
             this.nhaCungCapBindingSource.DataSource = this.quanLyHangHoaDataSet2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mặt hàng";
+            // 
+            // cmbMatHang
+            // 
+            this.cmbMatHang.DataSource = this.matHangBindingSource;
+            this.cmbMatHang.DisplayMember = "TenMatHang";
+            this.cmbMatHang.FormattingEnabled = true;
+            this.cmbMatHang.Location = new System.Drawing.Point(116, 18);
+            this.cmbMatHang.Name = "cmbMatHang";
+            this.cmbMatHang.Size = new System.Drawing.Size(156, 24);
+            this.cmbMatHang.TabIndex = 0;
+            this.cmbMatHang.ValueMember = "MaMatHang";
+            // 
+            // matHangBindingSource
+            // 
+            this.matHangBindingSource.DataMember = "MatHang";
+            this.matHangBindingSource.DataSource = this.quanLyHangHoaDataSet2;
+            // 
+            // matHangTableAdapter
+            // 
+            this.matHangTableAdapter.ClearBeforeFill = true;
+            // 
             // nhaCungCapTableAdapter
             // 
             this.nhaCungCapTableAdapter.ClearBeforeFill = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Qui cách";
-            // 
-            // cmbQuiCach
-            // 
-            this.cmbQuiCach.DataSource = this.quiCachBindingSource;
-            this.cmbQuiCach.DisplayMember = "TenQuiCach";
-            this.cmbQuiCach.FormattingEnabled = true;
-            this.cmbQuiCach.Location = new System.Drawing.Point(417, 18);
-            this.cmbQuiCach.Name = "cmbQuiCach";
-            this.cmbQuiCach.Size = new System.Drawing.Size(156, 24);
-            this.cmbQuiCach.TabIndex = 4;
-            this.cmbQuiCach.ValueMember = "MaQuiCach";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(308, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Đơn vị tính";
-            // 
-            // cmbDonViTinh
-            // 
-            this.cmbDonViTinh.DataSource = this.donViTinhBindingSource;
-            this.cmbDonViTinh.DisplayMember = "TenDonViTinh";
-            this.cmbDonViTinh.FormattingEnabled = true;
-            this.cmbDonViTinh.Location = new System.Drawing.Point(417, 53);
-            this.cmbDonViTinh.Name = "cmbDonViTinh";
-            this.cmbDonViTinh.Size = new System.Drawing.Size(156, 24);
-            this.cmbDonViTinh.TabIndex = 6;
-            this.cmbDonViTinh.ValueMember = "MaDonViTinh";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(308, 92);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Danh mục";
-            // 
-            // cmbDanhMuc
-            // 
-            this.cmbDanhMuc.DataSource = this.danhMucBindingSource;
-            this.cmbDanhMuc.DisplayMember = "TenDanhMuc";
-            this.cmbDanhMuc.FormattingEnabled = true;
-            this.cmbDanhMuc.Location = new System.Drawing.Point(417, 88);
-            this.cmbDanhMuc.Name = "cmbDanhMuc";
-            this.cmbDanhMuc.Size = new System.Drawing.Size(156, 24);
-            this.cmbDanhMuc.TabIndex = 8;
-            this.cmbDanhMuc.ValueMember = "MaDanhMuc";
-            // 
-            // quiCachBindingSource
-            // 
-            this.quiCachBindingSource.DataMember = "QuiCach";
-            this.quiCachBindingSource.DataSource = this.quanLyHangHoaDataSet2;
             // 
             // quiCachTableAdapter
             // 
             this.quiCachTableAdapter.ClearBeforeFill = true;
             // 
-            // quanLyHangHoaDataSet2BindingSource
-            // 
-            this.quanLyHangHoaDataSet2BindingSource.DataSource = this.quanLyHangHoaDataSet2;
-            this.quanLyHangHoaDataSet2BindingSource.Position = 0;
-            // 
-            // donViTinhBindingSource
-            // 
-            this.donViTinhBindingSource.DataMember = "DonViTinh";
-            this.donViTinhBindingSource.DataSource = this.quanLyHangHoaDataSet2BindingSource;
-            // 
             // donViTinhTableAdapter
             // 
             this.donViTinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // danhMucBindingSource
-            // 
-            this.danhMucBindingSource.DataMember = "DanhMuc";
-            this.danhMucBindingSource.DataSource = this.quanLyHangHoaDataSet2;
             // 
             // danhMucTableAdapter
             // 
@@ -320,27 +341,6 @@
             this.danhMucBindingSource1.DataMember = "DanhMuc";
             this.danhMucBindingSource1.DataSource = this.quanLyHangHoaDataSet2;
             // 
-            // btnLuu
-            // 
-            this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(98, 27);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 37);
-            this.btnLuu.TabIndex = 4;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // Hủy
-            // 
-            this.Hủy.Location = new System.Drawing.Point(98, 80);
-            this.Hủy.Name = "Hủy";
-            this.Hủy.Size = new System.Drawing.Size(75, 37);
-            this.Hủy.TabIndex = 5;
-            this.Hủy.Text = "Hủy";
-            this.Hủy.UseVisualStyleBackColor = true;
-            this.Hủy.Click += new System.EventHandler(this.Hủy_Click);
-            // 
             // frmHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -350,6 +350,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHangHoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hàng hóa";
@@ -358,13 +359,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matHangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quiCachBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViTinhBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViTinhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quiCachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhaCungCapBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -41,6 +41,18 @@
     <Property Name="MaHangHoa" Type="int" Nullable="false" />
     <Property Name="SoLuongCon" Type="int" />
   </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="CMND" />
+    </Key>
+    <Property Name="CMND" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
+    <Property Name="SDT" Type="varchar" MaxLength="10" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="100" />
+    <Property Name="DiemSo" Type="int" />
+    <Property Name="HangThe" Type="nvarchar" MaxLength="100" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
   <EntityType Name="LoiNhuan">
     <Key>
       <PropertyRef Name="MaLoiNhuan" />
@@ -211,6 +223,7 @@
     <EntitySet Name="GiaTriTonKhoToiThieu" EntityType="Self.GiaTriTonKhoToiThieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HangHoa" EntityType="Self.HangHoa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HangTonKho" EntityType="Self.HangTonKho" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoiNhuan" EntityType="Self.LoiNhuan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MatHang" EntityType="Self.MatHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />

@@ -32,16 +32,16 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtTonKho = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.quanLyHangHoaDataSet3 = new QuanLyHangHoa.QuanLyHangHoaDataSet3();
-            this.giaTriTonKhoToiThieuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.giaTriTonKhoToiThieuTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet3TableAdapters.GiaTriTonKhoToiThieuTableAdapter();
             this.maGiaTriTonKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongTonKhoToiThieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayThayDoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTriTonKhoToiThieuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyHangHoaDataSet3 = new QuanLyHangHoa.QuanLyHangHoaDataSet3();
+            this.label1 = new System.Windows.Forms.Label();
+            this.giaTriTonKhoToiThieuTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSet3TableAdapters.GiaTriTonKhoToiThieuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaTriTonKhoToiThieuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLuu
@@ -83,30 +83,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(522, 377);
             this.dataGridView1.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(295, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 32);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Giá trị tồn kho tối thiểu";
-            // 
-            // quanLyHangHoaDataSet3
-            // 
-            this.quanLyHangHoaDataSet3.DataSetName = "QuanLyHangHoaDataSet3";
-            this.quanLyHangHoaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // giaTriTonKhoToiThieuBindingSource
-            // 
-            this.giaTriTonKhoToiThieuBindingSource.DataMember = "GiaTriTonKhoToiThieu";
-            this.giaTriTonKhoToiThieuBindingSource.DataSource = this.quanLyHangHoaDataSet3;
-            // 
-            // giaTriTonKhoToiThieuTableAdapter
-            // 
-            this.giaTriTonKhoToiThieuTableAdapter.ClearBeforeFill = true;
-            // 
             // maGiaTriTonKhoDataGridViewTextBoxColumn
             // 
             this.maGiaTriTonKhoDataGridViewTextBoxColumn.DataPropertyName = "MaGiaTriTonKho";
@@ -131,6 +107,30 @@
             this.ngayThayDoiDataGridViewTextBoxColumn.Name = "ngayThayDoiDataGridViewTextBoxColumn";
             this.ngayThayDoiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // giaTriTonKhoToiThieuBindingSource
+            // 
+            this.giaTriTonKhoToiThieuBindingSource.DataMember = "GiaTriTonKhoToiThieu";
+            this.giaTriTonKhoToiThieuBindingSource.DataSource = this.quanLyHangHoaDataSet3;
+            // 
+            // quanLyHangHoaDataSet3
+            // 
+            this.quanLyHangHoaDataSet3.DataSetName = "QuanLyHangHoaDataSet3";
+            this.quanLyHangHoaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(295, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(323, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Giá trị tồn kho tối thiểu";
+            // 
+            // giaTriTonKhoToiThieuTableAdapter
+            // 
+            this.giaTriTonKhoToiThieuTableAdapter.ClearBeforeFill = true;
+            // 
             // frmGiaTriTonKhoToiThieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,13 +140,14 @@
             this.Controls.Add(this.txtTonKho);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGiaTriTonKhoToiThieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGiaTriTonKhoToiThieu";
+            this.Text = "Giá trị tồn kho tối thiểu";
             this.Load += new System.EventHandler(this.frmGiaTriTonKhoToiThieu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaTriTonKhoToiThieuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

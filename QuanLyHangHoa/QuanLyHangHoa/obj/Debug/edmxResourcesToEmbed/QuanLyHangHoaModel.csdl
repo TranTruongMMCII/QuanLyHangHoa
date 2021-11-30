@@ -196,6 +196,7 @@
       <End Role="HangTonKho" EntitySet="HangTonKhoes" />
     </AssociationSet>
     <EntitySet Name="GiaTriTonKhoToiThieux" EntityType="QuanLyHangHoaModel.GiaTriTonKhoToiThieu" />
+    <EntitySet Name="KhachHangs" EntityType="QuanLyHangHoaModel.KhachHang" />
   </EntityContainer>
   <EntityType Name="LoiNhuan">
     <Key>
@@ -254,5 +255,17 @@
     <Property Name="MaGiaTriTonKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="SoLuongTonKhoToiThieu" Type="Double" />
     <Property Name="NgayThayDoi" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="CMND" />
+    </Key>
+    <Property Name="CMND" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiemSo" Type="Int32" />
+    <Property Name="HangThe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
   </EntityType>
 </Schema>

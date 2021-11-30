@@ -143,9 +143,10 @@
             this.Controls.Add(this.txtLoiNhuan);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoiNhuan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLoiNhuan";
+            this.Text = "Lợi nhuận";
             this.Load += new System.EventHandler(this.frmLoiNhuan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loiNhuanBindingSource)).EndInit();

@@ -37,5 +37,6 @@ namespace QuanLyHangHoa
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<HangTonKho> HangTonKhoes { get; set; }
         public virtual DbSet<GiaTriTonKhoToiThieu> GiaTriTonKhoToiThieux { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
     }
 }

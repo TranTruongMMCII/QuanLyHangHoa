@@ -24,3 +24,5 @@ D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\Q
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmNhapHang.resources
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmGiaTriTonKhoToiThieu.resources
 D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmDanhSachHangHoaSapHetHang.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmKhachHang.resources
+D:\Draft\New folder\C#\NguyenThanhPhuong\QuanLyHangHoa\QuanLyHangHoa\obj\Debug\QuanLyHangHoa.frmMain.resources
