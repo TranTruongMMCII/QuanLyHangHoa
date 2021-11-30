@@ -22,6 +22,9 @@
         <EntityTypeShape EntityType="QuanLyHangHoaModel.LoiNhuan" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="QuanLyHangHoaModel.sysdiagram" Width="1.5" PointX="5.375" PointY="7.75" />
         <AssociationConnector Association="QuanLyHangHoaModel.FK__HangHoa__MaDanhM__6B24EA82" />
+        <EntityTypeShape EntityType="QuanLyHangHoaModel.HangTonKho" Width="1.5" PointX="5.25" PointY="11" />
+        <AssociationConnector Association="QuanLyHangHoaModel.FK__HangTonKh__MaHan__02FC7413" />
+        <EntityTypeShape EntityType="QuanLyHangHoaModel.GiaTriTonKhoToiThieu" Width="1.5" PointX="7.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

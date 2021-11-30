@@ -34,18 +34,34 @@ namespace QuanLyHangHoa
         {
             if (MessageBox.Show("Bạn muốn xóa chứ?", "Xóa đơn vị tính", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Validate();
-                donViTinhBindingSource.EndEdit();
-                donViTinhTableAdapter.Update(this.donViTinhDataSet.DonViTinh);
+                try
+                {
+                    Validate();
+                    donViTinhBindingSource.EndEdit();
+                    donViTinhTableAdapter.Update(this.donViTinhDataSet.DonViTinh);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
             frmDonViTinh_Load(sender, e);
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            Validate();
-            donViTinhBindingSource.EndEdit();
-            donViTinhTableAdapter.Update(this.donViTinhDataSet.DonViTinh);
+            try
+            {
+                Validate();
+                donViTinhBindingSource.EndEdit();
+                donViTinhTableAdapter.Update(this.donViTinhDataSet.DonViTinh);
+                MessageBox.Show("Lưu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lưu không thành công!");
+            }
             frmDonViTinh_Load(sender, e);
         }
     }

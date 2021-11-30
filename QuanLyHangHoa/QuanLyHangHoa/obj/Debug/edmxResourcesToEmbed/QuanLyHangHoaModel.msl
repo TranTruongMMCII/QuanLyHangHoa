@@ -93,5 +93,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="HangTonKhoes">
+      <EntityTypeMapping TypeName="QuanLyHangHoaModel.HangTonKho">
+        <MappingFragment StoreEntitySet="HangTonKho">
+          <ScalarProperty Name="SoLuongCon" ColumnName="SoLuongCon" />
+          <ScalarProperty Name="MaHangHoa" ColumnName="MaHangHoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaTriTonKhoToiThieux">
+      <EntityTypeMapping TypeName="QuanLyHangHoaModel.GiaTriTonKhoToiThieu">
+        <MappingFragment StoreEntitySet="GiaTriTonKhoToiThieu">
+          <ScalarProperty Name="NgayThayDoi" ColumnName="NgayThayDoi" />
+          <ScalarProperty Name="SoLuongTonKhoToiThieu" ColumnName="SoLuongTonKhoToiThieu" />
+          <ScalarProperty Name="MaGiaTriTonKho" ColumnName="MaGiaTriTonKho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

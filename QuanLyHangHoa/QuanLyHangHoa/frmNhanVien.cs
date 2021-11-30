@@ -34,18 +34,34 @@ namespace QuanLyHangHoa
         {
             if (MessageBox.Show("Bạn muốn xóa chứ?", "Xóa nhân viên", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Validate();
-                nhanVienBindingSource.EndEdit();
-                nhanVienTableAdapter.Update(this.quanLyHangHoaDataSet2.NhanVien);
+                try
+                {
+                    Validate();
+                    nhanVienBindingSource.EndEdit();
+                    nhanVienTableAdapter.Update(this.quanLyHangHoaDataSet2.NhanVien);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
             frmNhanVien_Load(sender, e);
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            Validate();
-            nhanVienBindingSource.EndEdit();
-            nhanVienTableAdapter.Update(quanLyHangHoaDataSet2.NhanVien);
+            try
+            {
+                Validate();
+                nhanVienBindingSource.EndEdit();
+                nhanVienTableAdapter.Update(quanLyHangHoaDataSet2.NhanVien);
+                MessageBox.Show("Lưu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lưu không thành công!");
+            }
             frmNhanVien_Load(sender, e);
         }
     }

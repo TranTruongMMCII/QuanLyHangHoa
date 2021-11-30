@@ -32,9 +32,17 @@ namespace QuanLyHangHoa
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            Validate();
-            nhaCungCapBindingSource.EndEdit();
-            nhaCungCapTableAdapter.Update(quanLyHangHoaDataSet2.NhaCungCap);
+            try
+            {
+                Validate();
+                nhaCungCapBindingSource.EndEdit();
+                nhaCungCapTableAdapter.Update(quanLyHangHoaDataSet2.NhaCungCap);
+                MessageBox.Show("Lưu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lưu không thành công!");
+            }
             frmNhaCungCap_Load(sender, e);
         }
 
@@ -42,9 +50,17 @@ namespace QuanLyHangHoa
         {
             if (MessageBox.Show("Bạn muốn xóa chứ?", "Xóa nhà cung cấp", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Validate();
-                nhaCungCapBindingSource.EndEdit();
-                nhaCungCapTableAdapter.Update(this.quanLyHangHoaDataSet2.NhaCungCap);
+                try
+                {
+                    Validate();
+                    nhaCungCapBindingSource.EndEdit();
+                    nhaCungCapTableAdapter.Update(this.quanLyHangHoaDataSet2.NhaCungCap);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
             frmNhaCungCap_Load(sender, e);
         }

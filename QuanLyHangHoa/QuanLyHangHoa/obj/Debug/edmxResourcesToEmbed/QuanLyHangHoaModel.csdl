@@ -33,6 +33,7 @@
     <NavigationProperty Name="PhieuNhapHangs" Relationship="Self.FK__PhieuNhap__MaHan__3E52440B" FromRole="HangHoa" ToRole="PhieuNhapHang" />
     <Property Name="MaDanhMuc" Type="Int32" />
     <NavigationProperty Name="DanhMuc" Relationship="QuanLyHangHoaModel.FK__HangHoa__MaDanhM__6B24EA82" FromRole="HangHoa" ToRole="DanhMuc" />
+    <NavigationProperty Name="HangTonKho" Relationship="QuanLyHangHoaModel.FK__HangTonKh__MaHan__02FC7413" FromRole="HangHoa" ToRole="HangTonKho" />
   </EntityType>
   <EntityType Name="MatHang">
     <Key>
@@ -189,6 +190,12 @@
       <End Role="DanhMuc" EntitySet="DanhMucs" />
       <End Role="HangHoa" EntitySet="HangHoas" />
     </AssociationSet>
+    <EntitySet Name="HangTonKhoes" EntityType="QuanLyHangHoaModel.HangTonKho" />
+    <AssociationSet Name="FK__HangTonKh__MaHan__02FC7413" Association="QuanLyHangHoaModel.FK__HangTonKh__MaHan__02FC7413">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="HangTonKho" EntitySet="HangTonKhoes" />
+    </AssociationSet>
+    <EntitySet Name="GiaTriTonKhoToiThieux" EntityType="QuanLyHangHoaModel.GiaTriTonKhoToiThieu" />
   </EntityContainer>
   <EntityType Name="LoiNhuan">
     <Key>
@@ -220,4 +227,32 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="HangTonKho">
+    <Key>
+      <PropertyRef Name="MaHangHoa" />
+    </Key>
+    <Property Name="MaHangHoa" Type="Int32" Nullable="false" />
+    <Property Name="SoLuongCon" Type="Int32" />
+    <NavigationProperty Name="HangHoa" Relationship="QuanLyHangHoaModel.FK__HangTonKh__MaHan__02FC7413" FromRole="HangTonKho" ToRole="HangHoa" />
+  </EntityType>
+  <Association Name="FK__HangTonKh__MaHan__02FC7413">
+    <End Type="QuanLyHangHoaModel.HangHoa" Role="HangHoa" Multiplicity="1" />
+    <End Type="QuanLyHangHoaModel.HangTonKho" Role="HangTonKho" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="MaHangHoa" />
+      </Principal>
+      <Dependent Role="HangTonKho">
+        <PropertyRef Name="MaHangHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GiaTriTonKhoToiThieu">
+    <Key>
+      <PropertyRef Name="MaGiaTriTonKho" />
+    </Key>
+    <Property Name="MaGiaTriTonKho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoLuongTonKhoToiThieu" Type="Double" />
+    <Property Name="NgayThayDoi" Type="DateTime" Precision="0" />
+  </EntityType>
 </Schema>

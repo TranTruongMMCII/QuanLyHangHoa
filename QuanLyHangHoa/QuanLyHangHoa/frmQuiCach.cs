@@ -52,18 +52,34 @@ namespace QuanLyHangHoa
         {
             if (MessageBox.Show("Bạn muốn xóa chứ?", "Xóa qui cách", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Validate();
-                quiCachBindingSource.EndEdit();
-                quiCachTableAdapter.Update(this.quanLyHangHoaDataSet2.QuiCach);
+                try
+                {
+                    Validate();
+                    quiCachBindingSource.EndEdit();
+                    quiCachTableAdapter.Update(this.quanLyHangHoaDataSet2.QuiCach);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
             frmQuiCach_Load(sender, e);
         }
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            Validate();
-            quiCachBindingSource.EndEdit();
-            quiCachTableAdapter.Update(quanLyHangHoaDataSet2.QuiCach);
+            try
+            {
+                Validate();
+                quiCachBindingSource.EndEdit();
+                quiCachTableAdapter.Update(quanLyHangHoaDataSet2.QuiCach);
+                MessageBox.Show("Lưu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lưu không thành công!");
+            }
             frmQuiCach_Load(sender, e);
         }
     }

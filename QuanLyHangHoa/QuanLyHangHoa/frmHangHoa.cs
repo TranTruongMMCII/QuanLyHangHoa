@@ -125,6 +125,7 @@ namespace QuanLyHangHoa
                             hangHoa.MaQuiCach = Convert.ToInt32((cmbQuiCach.SelectedValue).ToString());
                             hangHoa.MaMatHang = Convert.ToInt32((cmbMatHang.SelectedValue).ToString());
                             db.SaveChanges();
+                            MessageBox.Show("Sửa thành công");
                         }
                         catch (Exception)
                         {
@@ -148,6 +149,7 @@ namespace QuanLyHangHoa
                                 HangHoa hangHoa = db.HangHoas.Find(id);
                                 hangHoa.TrangThai = false;
                                 db.SaveChanges();
+                                MessageBox.Show("Xóa thành công");
                             }
                             catch (Exception)
                             {
@@ -168,8 +170,27 @@ namespace QuanLyHangHoa
                         hangHoa.MaMatHang = Convert.ToInt32((cmbMatHang.SelectedValue).ToString());
                         hangHoa.TrangThai = true;
                         QuanLyHangHoaEntities d = new QuanLyHangHoaEntities();
-                        d.HangHoas.Add(hangHoa);
-                        d.SaveChanges();
+                        HangHoa h = d.HangHoas.Where(p => p.MaDanhMuc == hangHoa.MaDanhMuc && p.MaDonViTinh == hangHoa.MaDonViTinh
+                        && p.MaQuiCach == hangHoa.MaQuiCach && p.MaMatHang == hangHoa.MaMatHang).FirstOrDefault();
+                        if (h != null)
+                        {
+                            if (h.TrangThai == false)
+                            {
+                                h.TrangThai = true;
+                                d.SaveChanges();
+                                MessageBox.Show("Thêm thành công");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm không thành công. Mặt hàng này đã tồn tại.");
+                            }
+                        }
+                        else
+                        {
+                            d.HangHoas.Add(hangHoa);
+                            d.SaveChanges();
+                            MessageBox.Show("Thêm thành công");
+                        }
                     }
                     catch (Exception)
                     {
@@ -187,6 +208,11 @@ namespace QuanLyHangHoa
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = dataGridView1.CurrentCell.RowIndex;
+            cmbDanhMuc.Text = dataGridView1.Rows[index].Cells[5].Value.ToString();
+            cmbQuiCach.Text = dataGridView1.Rows[index].Cells[3].Value.ToString();
+            cmbDonViTinh.Text = dataGridView1.Rows[index].Cells[4].Value.ToString();
+            cmbNhaCungCap.Text = dataGridView1.Rows[index].Cells[2].Value.ToString();
+            cmbMatHang.Text = dataGridView1.Rows[index].Cells[1].Value.ToString();
         }
     }
 }

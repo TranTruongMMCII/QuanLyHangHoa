@@ -27,9 +27,17 @@ namespace QuanLyHangHoa
         {
             if (MessageBox.Show("Bạn muốn xóa chứ?", "Xóa danh mục", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Validate();
-                danhMucBindingSource.EndEdit();
-                danhMucTableAdapter.Update(this.quanLyHangHoaDataSet1.DanhMuc);
+                try
+                {
+                    Validate();
+                    danhMucBindingSource.EndEdit();
+                    danhMucTableAdapter.Update(this.quanLyHangHoaDataSet1.DanhMuc);
+                    MessageBox.Show("Xóa thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa không thành công!");
+                }
             }
             frmDanhMuc_Load(sender, e);
         }
@@ -42,9 +50,17 @@ namespace QuanLyHangHoa
 
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            Validate();
-            danhMucBindingSource.EndEdit();
-            danhMucTableAdapter.Update(this.quanLyHangHoaDataSet1.DanhMuc);
+            try
+            {
+                Validate();
+                danhMucBindingSource.EndEdit();
+                danhMucTableAdapter.Update(this.quanLyHangHoaDataSet1.DanhMuc);
+                MessageBox.Show("Lưu thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lưu không thành công!");
+            }
             frmDanhMuc_Load(sender, e);
         }
     }

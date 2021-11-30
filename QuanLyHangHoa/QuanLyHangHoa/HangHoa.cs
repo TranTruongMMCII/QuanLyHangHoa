@@ -35,5 +35,6 @@ namespace QuanLyHangHoa
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhapHang> PhieuNhapHangs { get; set; }
         public virtual DanhMuc DanhMuc { get; set; }
+        public virtual HangTonKho HangTonKho { get; set; }
     }
 }

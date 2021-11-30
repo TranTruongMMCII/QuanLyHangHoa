@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.quanLyHangHoaDataSet = new QuanLyHangHoa.QuanLyHangHoaDataSet();
-            this.loiNhuanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loiNhuanTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSetTableAdapters.LoiNhuanTableAdapter();
             this.maLoiNhuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaTriLoiNhuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayThayDoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loiNhuanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyHangHoaDataSet = new QuanLyHangHoa.QuanLyHangHoaDataSet();
+            this.loiNhuanTableAdapter = new QuanLyHangHoa.QuanLyHangHoaDataSetTableAdapters.LoiNhuanTableAdapter();
             this.txtLoiNhuan = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loiNhuanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,20 +74,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(522, 377);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // quanLyHangHoaDataSet
-            // 
-            this.quanLyHangHoaDataSet.DataSetName = "QuanLyHangHoaDataSet";
-            this.quanLyHangHoaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loiNhuanBindingSource
-            // 
-            this.loiNhuanBindingSource.DataMember = "LoiNhuan";
-            this.loiNhuanBindingSource.DataSource = this.quanLyHangHoaDataSet;
-            // 
-            // loiNhuanTableAdapter
-            // 
-            this.loiNhuanTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // maLoiNhuanDataGridViewTextBoxColumn
             // 
@@ -113,6 +100,20 @@
             this.ngayThayDoiDataGridViewTextBoxColumn.Name = "ngayThayDoiDataGridViewTextBoxColumn";
             this.ngayThayDoiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // loiNhuanBindingSource
+            // 
+            this.loiNhuanBindingSource.DataMember = "LoiNhuan";
+            this.loiNhuanBindingSource.DataSource = this.quanLyHangHoaDataSet;
+            // 
+            // quanLyHangHoaDataSet
+            // 
+            this.quanLyHangHoaDataSet.DataSetName = "QuanLyHangHoaDataSet";
+            this.quanLyHangHoaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loiNhuanTableAdapter
+            // 
+            this.loiNhuanTableAdapter.ClearBeforeFill = true;
+            // 
             // txtLoiNhuan
             // 
             this.txtLoiNhuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +121,7 @@
             this.txtLoiNhuan.Name = "txtLoiNhuan";
             this.txtLoiNhuan.Size = new System.Drawing.Size(248, 38);
             this.txtLoiNhuan.TabIndex = 2;
+            this.txtLoiNhuan.TextChanged += new System.EventHandler(this.txtLoiNhuan_TextChanged);
             // 
             // btnLuu
             // 
@@ -146,8 +148,8 @@
             this.Text = "frmLoiNhuan";
             this.Load += new System.EventHandler(this.frmLoiNhuan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loiNhuanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyHangHoaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

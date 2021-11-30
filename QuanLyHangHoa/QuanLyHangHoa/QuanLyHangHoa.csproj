@@ -75,11 +75,23 @@
     <Compile Include="frmDanhMuc.Designer.cs">
       <DependentUpon>frmDanhMuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDanhSachHangHoaSapHetHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachHangHoaSapHetHang.Designer.cs">
+      <DependentUpon>frmDanhSachHangHoaSapHetHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDonViTinh.Designer.cs">
       <DependentUpon>frmDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiaTriTonKhoToiThieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaTriTonKhoToiThieu.Designer.cs">
+      <DependentUpon>frmGiaTriTonKhoToiThieu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHangHoa.cs">
       <SubType>Form</SubType>
@@ -111,13 +123,25 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuiCach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQuiCach.Designer.cs">
       <DependentUpon>frmQuiCach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaTriTonKhoToiThieu.cs">
+      <DependentUpon>QuanLyHangHoaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="HangHoa.cs">
+      <DependentUpon>QuanLyHangHoaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HangTonKho.cs">
       <DependentUpon>QuanLyHangHoaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LoiNhuan.cs">
@@ -152,6 +176,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyHangHoaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyHangHoaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHangHoaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyHangHoaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,8 +205,14 @@
     <EmbeddedResource Include="frmDanhMuc.resx">
       <DependentUpon>frmDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachHangHoaSapHetHang.resx">
+      <DependentUpon>frmDanhSachHangHoaSapHetHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDonViTinh.resx">
       <DependentUpon>frmDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaTriTonKhoToiThieu.resx">
+      <DependentUpon>frmGiaTriTonKhoToiThieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHangHoa.resx">
       <DependentUpon>frmHangHoa.cs</DependentUpon>
@@ -193,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuiCach.resx">
       <DependentUpon>frmQuiCach.cs</DependentUpon>
@@ -263,6 +301,17 @@
     </None>
     <None Include="QuanLyHangHoaDataSet2.xss">
       <DependentUpon>QuanLyHangHoaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyHangHoaDataSet3.xsc">
+      <DependentUpon>QuanLyHangHoaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyHangHoaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyHangHoaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyHangHoaDataSet3.xss">
+      <DependentUpon>QuanLyHangHoaDataSet3.xsd</DependentUpon>
     </None>
     <None Include="QuanLyHangHoaModel.edmx.diagram">
       <DependentUpon>QuanLyHangHoaModel.edmx</DependentUpon>
